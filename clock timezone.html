@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+        
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container my-10">
+        <div class="jumbotron">
+            <h1 class="display-4">Current Time is:<br><span id="indiaTime"></span></h1>
+            <hr class="my-4">
+            <p>Time for different countries </p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Browse Times</a>
+            </p>
+            <p>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  London
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="timebox">
+                        <h1>London</h1>
+                        <p id="londonTime"></p>
+                    </div>
+                      <script>
+                      var getLondonTime= function(){
+                        document.getElementById("londonTime").innerHTML=new Date().toLocaleString("en-US",{timeZone:"Europe/London",timestyle:"medium",hourCycle:'h24'});
+                       }
+                       getLondonTime();
+                       setInterval(getLondonTime,1000);
+                      </script>
+                      </div>
+                 </div>
+
+                 <br><p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      Newyork
+                    </a>
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        <div class="timebox">
+                            <h1>Newyork</h1>
+                            <p id="newyorkTime"></p>
+                        </div>
+                          <script>
+                          var getNewyorkTime= function(){
+                            document.getElementById("newyorkTime").innerHTML=new Date().toLocaleString("en-US",{timeZone:"America/New_york",timestyle:"medium",hourCycle:'h24'});
+                           }
+                           getNewyorkTime();
+                           setInterval(getNewyorkTime,1000);
+                          </script>
+                    </div>
+                  </div><br>
+
+                  <p>
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                      Sydney
+                    </a>
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                      <div class="timebox">
+                        <h1>Sydney</h1>
+                    <p id="sydneyTime"></p>
+                    </div>
+                      <script>
+                      var getSydneyTime= function(){
+                    document.getElementById("sydneyTime").innerHTML=new Date().toLocaleString("en-US",{timeZone:"Australia/Sydney",timestyle:"medium",hourCycle:'h24'});
+                   }
+                   getSydneyTime();
+                   setInterval(getSydneyTime,1000);
+                      </script>
+                      </div>
+                    </div><br>
+
+                    <p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                          Stockholm
+                        </a>
+                      </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                          <div class="timebox">
+                            <h1>Stockholm</h1>
+                        <p id="stockholmTime"></p>
+                        </div>
+                          <script>
+                          var getStockholmTime= function(){
+                        document.getElementById("stockholmTime").innerHTML=new Date().toLocaleString("en-US",{timeZone:"Europe/Stockholm",timestyle:"medium",hourCycle:'h24'});
+                       }
+                       getStockholmTime();
+                       setInterval(getStockholmTime,1000);
+                          </script>
+                          </div>
+                        </div><br>
+
+                        <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                              Dubai
+                            </a>
+                          </p>
+                          <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                              <div class="timebox">
+                                <h1>Dubai</h1>
+                            <p id="dubaiTime"></p>
+                            </div>
+                              <script>
+                              var getDubaiTime= function(){
+                            document.getElementById("dubaiTime").innerHTML=new Date().toLocaleString("en-US",{timeZone:"Asia/Dubai",timestyle:"medium",hourCycle:'h24'});
+                           }
+                           getDubaiTime();
+                           setInterval(getDubaiTime,1000);
+                              </script>
+                              </div>
+                            </div><br>
+
+                            <p>
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  Seoul
+                                </a>
+                              </p>
+                              <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                  <div class="timebox">
+                                    <h1>Seoul</h1>
+                                <p id="seoulTime"></p>
+                                </div>
+                                  <script>
+                                  var getSeoulTime= function(){
+                                document.getElementById("seoulTime").innerHTML=new Date().toLocaleString("en-US",{timeZone:"Asia/Seoul",timestyle:"medium",hourCycle:'h24'});
+                               }
+                               getSeoulTime();
+                               setInterval(getSeoulTime,1000);
+                                  </script>
+                                  </div>
+                                </div>
+
+            
+
+  
+                </div>
+              </div>
+          </div>
+      </div>
+
+   
+
+      <script>
+        var getIndiaTime= function(){
+    document.getElementById("indiaTime").innerHTML=new Date().toLocaleString("en-US",{timeZone:"Asia/Kolkata",timestyle:"medium",hourCycle:'h24'});
+   }
+   getIndiaTime();
+   setInterval(getIndiaTime,1000);
+
+    </script>
+   
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
